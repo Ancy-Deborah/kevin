@@ -1,0 +1,266 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    background:white;
+}
+.balloon {
+  background-image: url(https://static6.depositphotos.com/1011646/581/i/600/depositphotos_5815915-stock-photo-red-party-ballooons.jpg);
+  width: 180px;
+  height: 240px;
+  background-size: contain;
+  position: absolute;
+  bottom: 0%;
+  animation: move_y 30s linear forwards, oscil1 6s infinite;
+  left: 5%;
+}
+@keyframes move_y {
+  from {
+    bottom: -10%;
+  }
+  to {
+    bottom: 100%;
+  }
+}
+
+@keyframes oscil1 {
+  from {
+    translate: 0 0;
+    transform: rotate(0deg);
+    animation-timing-function: cubic-bezier(0.1, 0.3, 0.3, 1);
+  }
+  25% {
+    translate: 10px 0;
+    transform: rotate(3deg);
+    animation-timing-function: cubic-bezier(0.7, 0.0, 0.9, 0.7);
+  }
+  50% {
+    translate: 0 0;
+    transform: rotate(0deg);
+    animation-timing-function: cubic-bezier(0.1, 0.3, 0.3, 1);
+  }
+  75% {
+    translate: -10px 0;
+    transform: rotate(-3deg);
+    animation-timing-function: cubic-bezier(0.7, 0.0, 0.9, 0.7);
+  }
+  to {
+    translate: 0 0;
+    transform: rotate(0deg);
+  }
+}
+
+.balloon2 {
+  background-image: url(https://static6.depositphotos.com/1011646/581/i/600/depositphotos_5815915-stock-photo-red-party-ballooons.jpg);
+  width: 180px;
+  height: 240px;
+  background-size: contain;
+  position: absolute;
+  bottom: 0%;
+  animation: move_y 30s linear forwards, oscil1 6s infinite;
+  left: 85%;
+}
+ 
+
+
+.bday{
+    margin-top: 50px;
+    text-align: center; 
+    background: blue;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    cursor: pointer;
+    font-size: 80px;
+    font-family: bday;
+     animation: text 3s 1;
+    
+
+}
+  @keyframes text {
+            0% {
+                color: black;
+                margin-bottom: -40px;
+            }
+  
+            30% {
+                letter-spacing: 25px;
+                margin-bottom: -40px;
+            }
+  
+            85% {
+                letter-spacing: 8px;
+                margin-bottom: -40px;
+            }
+        }
+.name{
+    margin-top: 50px;
+    text-align: center;
+    background: blue;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:red;
+    cursor: pointer;
+    font-size: 120px;
+    font-family: bday;
+    animation: text 3s 1;
+}
+.content{
+    margin-top: 80px;
+    text-align: center;
+    background: linear-gradient(180deg,#f1340f 0%,#228B22 110%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    cursor: pointer;
+    font-size: 50px;
+    font-family: p;
+}
+.wrapper{
+    position: relative;
+    width: 320px;
+    margin: 50px auto;
+    perspective: 1000px;
+    margin-bottom: 500px;    
+}
+.img-area{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: rotateY(-360deg) translateZ(-300px);
+    animation: animate 25s steps(1000,end) infinite;
+
+}
+
+.single-img{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    top: 10px;
+    left: 10px;
+
+}
+.single-img img{
+    width: 300px;
+    height: 200px;
+    border: 5px solid #fff;
+}
+.single-img.img-one{
+    transform: rotateY(0deg) translateZ(300px);
+}
+.single-img.img-two{
+    transform: rotateY(60deg) translateZ(300px);
+}
+.single-img.img-three{
+    transform: rotateY(120deg) translateZ(300px);
+}
+.single-img.img-four{
+    transform: rotateY(180deg) translateZ(300px);
+}
+.single-img.img-five{
+    transform: rotateY(240deg) translateZ(300px);
+}
+.single-img.img-six{
+    transform: rotateY(300deg) translateZ(300px);
+}
+img{
+    filter: grayscale(20%);
+    transition: 1s;
+  
+}
+img:hover{
+    transition: 1s;
+    filter: grayscale(0);
+}
+@keyframes animate{
+from{
+    transform: rotateY(-360deg);
+}
+to{
+    transform: rotateY(0deg);
+}
+}
+
+@font-face{
+    font-family: bday;
+    src:url(bday.ttf);
+}
+
+
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    font-family: p1;
+    width:100%;
+      margin: 0 auto;
+      color:#313131;
+      font-weight: bold;
+      -webkit-animation:colorchange 20s infinite alternate;
+    }
+
+    @-webkit-keyframes colorchange {
+      0% {
+        color: blue;
+      }
+      
+      10% {
+        
+        color: #8e44ad;
+      }
+      
+      20% {
+        
+        color: green;
+      }
+      
+      30% {
+        
+        color: #d35400;
+      }
+      
+      40% {
+        
+        color: blue;
+      }
+      
+      50% {
+        
+        color: #34495e;
+      }
+      
+      60% {
+        
+        color: blue;
+      }
+      
+      70% {
+        
+        color: #2980b9;
+      }
+      80% {
+     
+        color: #f1c40f;
+      }
+      
+      90% {
+     
+        color: #2980b9;
+      }
+      
+      100% {
+        
+        color: red;
+      }
+    }
+.example{
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+marquee{
+        color: #228B22;
+        font-size: 50px;
+        font-family: p;
+    }
+    
